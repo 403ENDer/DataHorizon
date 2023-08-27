@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataHorizon - Login</title>
+    <link rel = "shortcut icon" href="img/logo.png" type="image/png">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Include your CSS stylesheet here -->
+    <script>
+        // JavaScript function to display a popup message
+        function showMessage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+
+            if (message === 'no') {
+                alert('No user found, please register.');
+            } else if (message === 'wrong') {
+                alert('Incorrect Password/Username.');
+            } else if(message === 'res'){
+                alert('Regiteraion successfull , Login now!!')
+            }
+        }
+
+        // Call the showMessage function when the page loads
+        window.onload = showMessage;
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+        <form method="POST" action="php/login.php">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="registration.html">Register here</a></p>
+        </form>
+        
+    </div>
+</body>
+</html>

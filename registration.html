@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataHorizon - Registration</title>
+    <link rel = "shortcut icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Include your CSS stylesheet here -->
+    <script>
+        // JavaScript function to display a popup message
+        function showMessage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+
+            if (message === 'pass') {
+                alert('Password doesnt match');
+            } else if (message === 'user') {
+                alert('User already exist');
+            }else if(message === 'error'){
+                alert('Something went wrong try again!!!')
+            }
+
+        }
+
+        // Call the showMessage function when the page loads
+        window.onload = showMessage;
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+        <form method="POST" action="php/registration.php">
+            <h2>Registration</h2>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+        
+    </div>
+</body>
+</html>

@@ -460,7 +460,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form id="quoteForm" method="post">
+                        <form id="quoteForm" method="post" netlify>
                             <div class="row g-3">
                                 <div class="col-xl-12">
                                     <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;" id="name">
@@ -484,45 +484,6 @@
                                 </div>
                             </div>
                         </form>
-                        <script >
-                            document.getElementById('quoteForm').addEventListener('submit', function (event) {
-                                event.preventDefault();
-                            
-                                const name = document.getElementById('name').value;
-                                const email = document.getElementById('email').value;
-                                const message = document.getElementById('message').value;
-                            
-                                // Create an object with the form data
-                                const formData = {
-                                    name,
-                                    email,
-                                    message
-                                };
-                            
-                                // Send the form data to the server for email processing
-                                fetch('/send-quote-request', {
-                                    method: 'POST',
-                                    headers: {
-                                        'Content-Type': 'application/json'
-                                    },
-                                    body: JSON.stringify(formData)
-                                })
-                                .then(response => {
-                                    if (response.ok) {
-                                        // Display a success message to the user
-                                        alert('Quote request sent successfully.');
-                                        document.getElementById('quoteForm').reset(); // Clear the form
-                                    } else {
-                                        // Display an error message to the user
-                                        alert('Error sending quote request. Please try again later.');
-                                    }
-                                })
-                                .catch(error => {
-                                    console.error('Error:', error);
-                                    alert('An unexpected error occurred. Please try again later.');
-                                });
-                            });
-                          </script>
                     </div>
                 </div>
             </div>

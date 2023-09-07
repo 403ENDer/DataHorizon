@@ -464,10 +464,10 @@
 				<input type="hidden" name="subject" value="New lead from %{formName} (%{submissionId})" />
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;" id="name">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;" id="name" name = "name">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;" id="email">
+                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;" id="email" name = "email">
                                 </div>
                                 <div class="col-12">
                                     <select class="form-select bg-light border-0" style="height: 55px;">
@@ -477,7 +477,7 @@
                                         <option value="3">API Creation</option>
                                     </select>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12" name = "message">
                                     <textarea class="form-control bg-light border-0" rows="3" placeholder="Message" id="message"></textarea>
                                 </div>
                                 <div class="col-12">

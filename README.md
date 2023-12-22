@@ -1,7 +1,3 @@
-Got it! Let's tailor the README file to reflect the details of DataHorizon as an imaginary data analytics company:
-
----
-
 # DataHorizon Website
 
 Welcome to the DataHorizon website repository! This project contains the HTML, CSS, and JavaScript code for the DataHorizon company website.
@@ -26,13 +22,13 @@ To run the website locally, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/<YourUsername>/datahorizon-website.git
+   [git clone https://github.com/403ENDer/DataHorizon.git]
    ```
 
 2. Open the project directory:
 
    ```bash
-   cd datahorizon-website
+   cd datahorizon
    ```
 
 3. Open the `index.html` file in your preferred web browser.

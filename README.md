@@ -6,7 +6,7 @@ Welcome to the DataHorizon website repository! This project contains the HTML, C
 
 DataHorizon is an imaginary data analytics company that specializes in providing cutting-edge solutions for data analysis and insights.
 
-The website is hosted on Netlify, and you can access it [here](<Netlify_Link>).
+The website is hosted on Netlify, and you can access it [here](https://datahorizon.netlify.app/).
 
 ## Table of Contents
 
